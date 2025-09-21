@@ -183,5 +183,11 @@ def main():
                 browser.close()
 
 if __name__ == "__main__":
-    main()
-    print("脚本执行完毕。")
+    print("开始执行添加服务器时间任务...")
+    success = add_server_time()
+    if success:
+        print("任务执行成功。")
+        exit(0)
+    else:
+        print("任务执行失败。")
+        exit(1)
